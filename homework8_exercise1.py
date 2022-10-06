@@ -10,7 +10,7 @@ user = [
     {"name": "Oleksandr", "age": 20},
     {"name": "Oleksandr", "age": 28},
     {"name": "Dmitriy", "age": 20},
-    {"name": "Mykola", "age": 25}
+    {"name": "Mykola", "age": 25},
 ]
 print("List of dictionary: ", user)
 
@@ -44,16 +44,16 @@ name = []
 long_name = []
 # cycle for dictionaries in list user
 for d in user:
-    # name appended to list "name"
-    name.append(d["name"])
+    # len of name appended to list "name"
+    name.append(len(d['name']))
 # list "name" sorted
 name.sort()
 # cycle for dictionaries in list user
 for d in user:
-    # if list name with index -1 = name in dictionary
-    if name[-1] == d["name"]:
-        # name added to long_name list
-        long_name.append(d["name"])
+    # if list name with index -1 = len name in dictionary
+    if len(d['name']) == name[-1]:
+        # len of long name appended to list "long name"
+        long_name.append(d['name'])
 print("Longest name: ", long_name)
 
 
